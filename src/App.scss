@@ -1,0 +1,53 @@
+$green-color: #009879;
+$white-color: #dddddd;
+
+.styled-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  width: 100%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+  background-color: $green-color;
+  color: #ffffff;
+  text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid $white-color;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid $green-color;
+}
+
+.styled-table tbody tr.active-row {
+  font-weight: bold;
+  color: $green-color;
+}
+
+.justify-content-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+@for $i from 0 to 100 {
+  .width-#{$i} {
+    width: $i * 1%;
+  }
+  .p-#{$i} {
+    padding: $i * 1px;
+  }
+}
